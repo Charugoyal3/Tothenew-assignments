@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+        type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+    <style>
+        .parent{
+            background-color: blue;
+            width: 40%;
+            height: 40%;
+        }
+        p {
+            background-color: limegreen;
+            padding: 20px;
+            text-align: center;
+        }
+        li{
+            list-style: none;
+            background: lightgrey;
+            text-align: center;
+            margin: 15px;
+            margin-left: 0px;
+            width: 90%; 
+        }
+    </style>
+
+  
+</head>
+<body>
+   <div class="parent">
+    <p>Web Development</p>
+       <ul>
+           <li>Html</li>
+           <li> CSS</li>
+           <li>javascript</li>
+        </ul>
+   </div>
+   <script>
+       $(document).ready(function()
+       {
+           $('.parent').on('click', function() {
+               alert("You clicked!");
+           }).children().on('click',function(event){
+               event.stopPropagation();
+            // alert("You clicked! on ");
+           });
+       });
+   </script>
+
+
+
+   
+
+</body>
+</html>

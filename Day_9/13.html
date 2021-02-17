@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+        type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+
+</head>
+<body>
+    <button>click to know which element has max height</button>
+ 
+    <ul>
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Soda</li>
+    </ul>
+    <p class="panel">hiii <br><br> Jst trting jquery</p>
+    <div class="panel">hello<br>I'm gr8</div>
+ </body>
+ <script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            var highest = null;
+            var temp = 0;
+            $("li,p,div").each(function () {
+                var h = $(this).height();
+                if (h > temp) {
+                    temp = h;
+                    highest = $(this);
+                }
+            });
+            highest.css("background-color", "red");
+        });
+    });
+ 
+ </script>
+ </body>
+ </html>
+ 

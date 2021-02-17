@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+        type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+
+  
+</head>
+<body>
+    <select id="mySelect">
+        <option value="One">One</option>
+        <option value="Two">Two</option>
+        <option value="Three">Three</option>
+      </select>
+      <div></div>
+    <script>
+        $(document).ready(function(){
+            $("#mySelect").change(function(){
+                $("div").append("<p class='test'>Click me " + $(this).val().text+ "</p>")
+            });
+        });
+    </script>
+    
+   
+
+</body>
+</html>

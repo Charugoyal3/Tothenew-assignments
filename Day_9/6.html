@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+        type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+
+  
+</head>
+<body>
+    <div>This is a div</div>
+ <p>This is another paragraph.</p>
+ <button>Replace the first div element with p element</button>
+ 
+ </body>
+ <script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            $("div").replaceWith("<p>This is paragraph</p>");
+        });
+    });
+ </script>
+   
+
+</body>
+</html>
+
+
+ 

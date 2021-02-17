@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To The New</title>
+    <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="head">
+            <div id="text01">TO THE NEW</div>
+            <div class="head_sub">
+                <div>Home</div>
+                <div>Quick Help</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-wrapper">
+        <div class="card-container">
+            <div class="form_head">
+                <h4 id="f01"> Bug Report</h4>
+            </div>
+            <div class="input">
+                    <label class="lab">Title:*</label>
+                    <input type="text" size="43" class="t01" class="allinput" required>
+                    <label class="lab">Description:*</label>
+                    <textarea rows="3" cols="43" class="allinput" required></textarea> 
+                    <label class="lab">Operating system:</label>
+                    <select name="os" class="os">
+                          <option class="os" value="Windows Xp">Windows XP</option>
+                          <option  class="os" value="Linux">Linux</option>
+                      </select>
+                    <label class="lab">Product:*</label>
+                    <select name="os" class="os">
+                        <option class="os" value="Formoid">Formoid</option>
+                        <option  class="os" value="Linux">Linux</option>
+                    </select>
+                    <label class="lab ver">Version:*</label>
+                    <input type="text" class="t01" class="allinput" size="8">
+                    <label class="lab">License:</label>
+                    <div>
+                        <input type="radio" id="free" name="License" value="free">
+                        <label class="lab" for="free">Free</label>
+                        <input type="radio" id="business" name="License" value="business">
+                        <label class="lab" for="business">Business</label>
+                    </div>
+                    <label class="lab">Severity:</label>
+                    <select name="os" class="os">
+                        <option class="os" value="Critical">Critical</option>
+                        <option  class="os" value="Normal">Normal</option>
+                    </select>
+                    <label class="lab">Attachments:</label>
+                    <div class="inputFile">
+                        <label for="files" class="label">Choose File</label>
+                        <input type="file" id="files" class="allinput1" name="filename">
+                    </div>
+                   
+ 
+            </div>
+            <hr>
+            <footer class="footer">
+                <div>
+                    <button id="b01">Send</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+   
+</body>
+</html>

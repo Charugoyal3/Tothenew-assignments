@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+        type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+
+  
+</head>
+<body>
+    <h2></h2>
+    <button class="clickbtn">generate new element</button>
+    <script>
+    //     $( document ).ready(function() {
+    //         var counter = 0;
+
+    //         $("button").bind("click",function() {
+    //             $("button").append("Click me " + (++counter) )
+    //         });
+    // });
+        
+    $(".clickbtn").click(function(){
+        var el = $("<button>click</button> <br>",{
+            class:"clickbtn"s
+        });
+    //click function on dynamically created element is not working
+        $(".clickbtn").append(el);
+        });
+        
+    </script>
+   
+
+</body>
+</html>

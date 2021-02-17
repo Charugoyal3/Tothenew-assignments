@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+        type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+
+  
+</head>
+<body>
+   
+    <button>Click me</button>
+    <div></div>
+    <script>
+    $(document).ready(function(){
+        $("button").click(function() {
+        // data path
+            $.ajax({url:"demo.txt", async: false, success: function(result) {
+         // get Result
+        $("div").html(result);
+            }});
+        });
+    });
+</script>
+    
+   
+
+</body>
+</html>

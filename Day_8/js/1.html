@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Learning JS</title>
+  </head>
+  <body>
+    <p>Click the button to demonstrate the prompt box.</p>
+
+    <button onclick="myFunction()">Try it</button>
+    
+    <p id="demo"></p>
+    
+    <script>
+    function myFunction() {
+      var amount= prompt("Please enter amount");
+      var rate= prompt("Please enter rate of interest");
+      var time= prompt("Please enter time");
+      document.getElementById("demo").innerHTML =
+        'Simple Interest: ' + ((amount* rate*time)/100);
+    }
+    </script>
+  </body>
+</html>

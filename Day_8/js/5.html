@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="demo">Data </h2>
+    <script>
+        var data = [
+            {
+                name:"Charu",
+                age: "22",
+                salary:"6000",
+                DOB:"03/08/1999"
+
+            },
+            {
+                name:"Colt",
+                age: "22",
+                salary:"5000",
+                DOB:"03/08/1999"
+             },
+             {
+                name:"John",
+                age: "21",
+                salary:"300",
+                DOB:"03/08/1999"
+             },
+             {
+                name:"Denil",
+                age: "23",
+                salary:"500",
+                DOB:"03/08/1999"
+             },
+             {
+                name:"Anmol",
+                age: "19",
+                salary:"400",
+                DOB:"03/08/1999"
+             }
+        ]
+
+        console.log(data);
+
+        //5(2) -- filter
+
+        console.log(data.filter(function(item){
+            return item.salary>5000;
+        }));
+
+        //5(3) -- groupby
+
+        function groupBy(key){
+            return function group(array){
+                return array.reduce((acc, obj)=>{
+                    const prop = obj[key];
+                    acc[prop] = acc[prop] || [];
+                    acc[prop].push(obj);
+                    return acc;
+                },{});
+            };
+        }
+        const GroupByAge = groupBy("age");
+        console.log(GroupByAge(data));
+
+        var a= new Array(data.length);
+        for(let i=0;i<data.length;i++){
+            if(data[i].salary<1000 && data[i].age>20){
+                 a[i]=data[i].salary*5;
+                 console.log(data[i]);
+                 console.log("Salary is "+a[i]);
+            }
+        }
+    </script>
+</body>
+</html>

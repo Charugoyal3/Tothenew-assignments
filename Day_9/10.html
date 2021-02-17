@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+        type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+
+  
+</head>
+<body>
+    <div class="wrapper">
+            <button value="Hover on me!" id="hover">Hover On Me!
+            </button>
+        <div class="dropdown">
+        <ul>
+            <li><a href="#">JavaScript Page</a></li>
+            <li><a href="#">HTML Page</a></li>
+            <li><a href="#">CSS Page</a></li>
+        </ul>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("button").hover(function(){
+                $(".dropdown").slideToggle();
+            });
+        });
+    </script>
+   
+
+</body>
+</html>
