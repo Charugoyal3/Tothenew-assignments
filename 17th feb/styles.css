@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Apply font properties (font-family, font-weight, font-size etc) on the given text. */
+@import url("https://fonts.googleapis.com/css2?family=Newsreader&display=swap");
+
+body {
+  font-family: "Newsreader", serif;
+  font-weight: 300;
+  font-size: 1.25em;
+  font-style: normal;
+}
+
+/* Apply background property (background-image, background-repeat etc) */
+.back-prop {
+  background-image: url(https://picsum.photos/1920/1080);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-origin: border-box;
+}
+
+/* Apply pseudo selectors (before,after, last-child etc) */
+li::before {
+  content: "➡";
+}
+
+li::after {
+  content: "⬅";
+}
+
+li:last-child {
+  color: red;
+}
+
+li:nth-child(3) {
+  padding-top: 10px;
+}
+
+/* Apply combinators (direct child >, adjacent +,  etc) */
+.combinators h1 {
+  background-color: grey;
+}
+
+.combinators > p {
+  border: 1px double;
+}
+
+div + p {
+  color: silver;
+}
+
+div ~ h4 {
+  color: slateblue;
+}
+
+/* Use attributes selector (text, number etc) */
+input[type="text"] {
+  background-color: black;
+}
+
+input[placeholder] {
+  color: white;
+}
