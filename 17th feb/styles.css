@@ -59,6 +59,12 @@ div ~ h4 {
 input[type="text"] {
   background-color: black;
 }
+input[type="number"] {
+  background-color: black;
+}
+input[type="password"] {
+  background-color: black;
+}
 
 input[placeholder] {
   color: white;
