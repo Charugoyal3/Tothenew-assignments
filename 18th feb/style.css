@@ -1,0 +1,228 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.nav-content{
+    max-width:86%;
+    margin:auto;
+    overflow:auto;
+    padding: 0 20px;
+
+}
+
+.primary-nav{
+    background-color: #F8F8F8;
+    overflow:auto;
+}
+
+.nav-content .primary-content{
+    list-style: none;
+    float:left;
+    padding-top: 17px;
+}
+.primary-content li{
+    float: left;
+    display: block;
+    padding: 5px 2px;
+    text-align: center;
+    font-size: 10px;
+    color: #ADABA9;
+    font-weight: 600;
+}
+.primary-content li::after{
+    content: "";
+    border-right: 1.8px solid #ADABA9;
+    padding-right: 5px;
+}
+
+.primary-content li:last-child:after{
+    content:"";
+    border: none;
+}
+
+.icon{
+    float:right;
+    padding: 14px;
+}
+
+.icon i{
+    padding: 8px;
+    color:#84BA42;
+}
+
+.secondary-nav{
+    padding: 15px 0px;
+}
+
+.logo{
+    float:left;
+}
+
+.info{
+    float:right;
+    display: flex;
+    align-items: center;
+}
+
+.info .call{
+    display:flex;
+    margin: 0 13px;
+    color:#ADABA9;
+    font-size: 15px;
+
+}
+.info .call i{
+    color: #84BA42;
+    font-size: 25px;
+    padding: 0px 15px;
+
+}
+
+.btn-apply{
+    background-color: #fff;
+    color: #84BA42;
+    border: 2px solid #84BA42;
+    padding: 11px 50px;;
+    margin-left: 25px
+   
+}
+
+.main-nav{
+    background-color:#84BA42 ;
+    padding: 15px 0px ;
+    display: flex;
+    justify-content: center;
+}
+
+.main-content{
+    color:white;
+    list-style: none;
+    display: flex;
+ 
+}
+.main-content li{
+    text-transform: uppercase;
+    padding: 0 13px;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+
+.container{
+    position:relative;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.5)), url(./assets/banner-image.jpg);
+    height:700px;
+   
+}
+
+.img_content{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color:#fff;
+    text-align: center;
+}
+.img_content h1{
+    font-size: 51px;
+    line-height: 1.2em;
+    padding-bottom: 10px;
+}
+.img_content div{
+    padding-bottom: 20px;
+    line-height: 1.8em;
+}
+.btn1{
+    border: 1px solid #fff;
+    color:white;
+    background-color: transparent;
+    padding: 10px;
+    margin: 0 10px;
+    
+}
+.btn1:hover{
+    border: none;
+    color:white;
+    background-color: #84BA42;
+    padding: 10px;
+    
+}
+.btn1:visited{
+    border: none;
+    
+}
+.cards{
+    position: absolute;
+    display: flex;
+    bottom: -12%;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center
+    
+}
+.card1{
+    background-color:#4A84FA ;
+    width:250px;
+    height: 200px;
+    padding: 21px 20px;
+    
+}
+.card1 i{
+    padding-bottom:11px;
+}
+.card1 p{
+    font-size: 15px;
+    line-height: 1.4em;
+    padding-top: 9px;
+}
+.card2{
+    background-color:#FA6E6E ;
+    width:250px;
+    height: 200px;
+    padding: 21px 20px;
+}
+.card2 i{
+    padding-bottom:11px;
+}
+.card2 p{
+    font-size: 15px;
+    line-height: 1.4em;
+    padding-top: 9px;
+}
+.card3{
+    background-color:#B5D56A ;
+    width:250px;
+    height: 200px;
+    padding: 21px 20px;
+}
+.card3 i{
+    padding-bottom:11px;
+}
+.card3 p{
+    font-size: 15px;
+    line-height: 1.4em;
+    padding-top: 9px;
+}
+.card4{
+    background-color:#FA8147;
+    width:250px;
+    height: 200px;
+    padding: 21px 20px;
+}
+.card4 i{
+    padding-bottom:11px;
+}
+.card4 p{
+    font-size: 15px;
+    line-height: 1.4em;
+    padding-top: 9px;
+}
