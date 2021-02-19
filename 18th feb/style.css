@@ -119,6 +119,7 @@ body{
     position:relative;
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.5)), url(./assets/banner-image.jpg);
     height:700px;
+    background-repeat: no-repeat;
    
 }
 
