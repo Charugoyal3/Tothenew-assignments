@@ -8,11 +8,11 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
-nav{
+/* nav{
     max-width:1300px;
     width:100%;
     margin:auto;
-}
+} */
 
 .nav-content{
     /* max-width:86%; */
@@ -132,16 +132,20 @@ nav{
     cursor:pointer;
 
 }
-
 .container{
+    position:relative;
+}
+
+.img{
     position:relative;
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.5)), url(./assets/banner-image.jpg);
     height:700px;
-    /* background-repeat: no-repeat;
-    background-position: center center; */
-    max-width: 1300px;
+    /* max-width: 1300px;
     width: 100%;
-    margin: auto;
+    margin: auto; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
    
 }
 
