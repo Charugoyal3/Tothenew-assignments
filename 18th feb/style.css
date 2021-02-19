@@ -8,12 +8,19 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
+nav{
+    max-width:1300px;
+    width:100%;
+    margin:auto;
+}
 
 .nav-content{
-    max-width:86%;
+    /* max-width:86%; */
     margin:auto;
     overflow:auto;
-    padding: 0 20px;
+    /* padding: 0 20px; */
+    max-width: 1000px;
+    width:100%
 
 }
 
@@ -31,7 +38,6 @@ body{
     float: left;
     display: block;
     padding: 5px 2px;
-    text-align: center;
     font-size: 10px;
     color: #ADABA9;
     font-weight: 600;
@@ -49,12 +55,16 @@ body{
 
 .icon{
     float:right;
-    padding: 14px;
+    padding: 14px 0px;
 }
 
 .icon i{
     padding: 8px;
     color:#84BA42;
+}
+
+.icon i:last-child{
+    padding:0px
 }
 
 .secondary-nav{
@@ -96,9 +106,9 @@ body{
 
 .main-nav{
     background-color:#84BA42 ;
-    padding: 15px 0px ;
-    display: flex;
-    justify-content: center;
+    /* padding: 15px 0px ; */
+    /* display: flex; */
+    /* justify-content: center; */
 }
 
 .main-content{
@@ -109,9 +119,17 @@ body{
 }
 .main-content li{
     text-transform: uppercase;
-    padding: 0 13px;
-    font-size: 14px;
+    padding: 15px 13px;
+    font-size: 13px;
     font-weight: 600;
+
+}
+.main-content li:hover{
+    padding:15px 13px;
+    font-size: 13px;
+    font-weight: 600;
+    background-color:#4b800a ;
+    cursor:pointer;
 
 }
 
@@ -119,7 +137,11 @@ body{
     position:relative;
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.5)), url(./assets/banner-image.jpg);
     height:700px;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
+    background-position: center center; */
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
    
 }
 
