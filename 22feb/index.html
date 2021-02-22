@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Website</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a class="logo" href="/">Responsive Layout</a>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Generic</a></li>
+                    <li><a href="/">Elements</a></li>
+                </ul>
+                <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <a href="#">Home</a>
+                    <a href="#">Generic</a>
+                    <a href="#">Elements</a>
+                  </div>
+                  <div id="main">
+                    <button class="openbtn" onclick="openNav()">☰</button>  
+                  </div>
+            </div>
+        </nav>
+        <div class="welcome container">
+            <div class="showcase">
+                <h1>Welcome</h1>
+                <div class="welcome-icons">
+                    <div class="left-icon">
+                        <i class="fas fa-car fa-2x"></i>
+                        <h3>Travel</h3>
+                        <p class="lead">Choose for ride</p>
+                    </div>
+                    <div id="border"></div>
+                    <div class="right-icon">
+                        <i class="fas fa-camera fa-2x"></i>
+                        <h3>Gallery</h3>
+                        <p class="lead">Choose photos</p>
+                    </div>
+                </div>
+                <a class="btn" href="/">GET STARTED</a>
+            </div>
+        </div>
+    </header>
+    <section class="content container">
+        <div class="leftside">
+            <img class="img-round" src="./camera.jpeg" alt="mobile">
+            <h5 class="content-heading">Lorem ipsum dolor sit</h5>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores harum libero, vel ex amet sunt? </p>
+            <a class="btn" href="/">Learn More</a>
+        </div>
+        <div class="rightside">
+            <img class="img-round1" src="./camera.jpeg" alt="camera">
+            <h3 class="content-heading">Sed feugiat tempus adipicsing</h3>
+           <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores harum libero, vel ex amet sunt? </p>
+            <a class="btn" href="/">Learn More</a>
+        </div>
+    </section>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidebar").style.width = "28vw";
+          document.getElementById("main").style.marginLeft = "28vw";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidebar").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
+    </script>
+    
+</body>
+</html>

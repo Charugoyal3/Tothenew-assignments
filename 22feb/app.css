@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h1, h2 {
+    padding-bottom: 20px;
+}
+
+.container{
+    max-width: 1100px;
+    width: 100%;
+    margin:auto;
+    overflow: auto;  
+  
+}
+
+.container:first-child{
+  border-bottom: 1px solid #a29f9f;;
+  
+}
+
+header{
+    background: url('./photo-1503951458645-643d53bfd90f.jpeg') no-repeat center center/cover;
+    height: 100vh;
+}
+
+nav{
+    background: rgb(75,75,89,0.64);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    z-index: 2;
+}
+.logo{
+    float:left;
+    padding-top: 20px;
+    color: #fff;
+}
+
+.container ul{
+    float: right;
+    list-style: none;
+   
+}
+
+.container ul li {
+    float:left;
+}
+
+.container ul li a {
+    display: block;
+    padding: 20px;
+    text-align: center;
+}
+
+.showcase{
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+.welcome h1 {
+    font-size: 2.5rem;
+    line-height: 1.2em;
+  }
+
+.welcome-icons{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 19px -91px;
+   
+}
+
+#border{
+    border-right : 1px solid #a29f9f;
+}
+
+.welcome-icons i{
+    color:#6CC092;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 12px;
+    color: #6CC092;
+    background: transparent;
+    padding: 6px 30px;
+    border: 2.4px solid #6CC092;
+    cursor: pointer;
+    border-radius: 55px;
+    margin: 30px;
+}
+
+.btn:hover {
+    background-color: #6CC092;
+    color: #fff;
+}
+
+.content{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 82px 0px;
+    overflow: hidden;
+}
+
+.leftside{
+    padding: 0 108px;
+}
+.rightside{
+    padding: 0 108px;
+}
+
+ 
+.img-round{
+    border-radius: 64%;
+    width: 65%;
+    height: 47%;
+    filter:grayscale(100%);
+
+}
+.img-round1{
+    border-radius: 64%;
+    width: 65%;
+    height: 47%;
+    filter:grayscale(100%);
+
+
+}
+
+.content-heading{
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+    margin: 15px 0px;
+    color: #535252;
+}
+
+.lead{
+    color:#a29f9f;
+}
+
+.sidebar {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #6CC092;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    width:0;
+  }
+  .sidebar a:first-child {
+ 
+    border-bottom: none;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 19px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+    border-bottom: 1px dotted #fff;
+  }
+  
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    visibility: hidden;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+@media only screen and (max-width:786px){
+    .container{
+        max-width: 500px;
+        width:100%;
+        margin:auto
+    }
+    .content{
+        flex-direction: column;
+    }
+    .welcome-icons{
+        flex-direction: column;
+       
+    }
+    #border{
+        display: none;
+    }
+    .left-icon{
+        padding-bottom: 30px;
+    }
+    .btn{
+        padding: 0px 28px;
+    }
+    h1{
+        padding: none;
+    }
+
+    .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: transparent;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        float:right;
+        outline: none;
+        visibility: visible;
+    }
+      .container ul{
+       display: none;
+       
+    }
+}
+@media only screen and (max-width:415px){
+    .container{
+        max-width: 302px;
+        width:100%;
+        margin:auto
+    }
+    .btn{
+        padding: 0px 9px;
+        margin: 10px 0px;
+    }
+}
+
+
+@media only screen and (max-width:375px){
+
+    .container{
+        max-width: 302px;
+        width:100%;
+        margin:auto
+    }
+    .showcase{
+        top:63%
+    }
+    .btn{
+        padding: 0px 9px;
+        margin: 10px 0px;
+    }
+    h1{
+        padding: none;
+    }
+
+}
+
+@media screen and (max-height: 450px) {
+  
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+  
+
