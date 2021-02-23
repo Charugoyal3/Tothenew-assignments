@@ -173,7 +173,7 @@ nav{
   }
   
   .sidebar a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 0px 4px 16px;
     text-decoration: none;
     font-size: 19px;
     color: #fff;
