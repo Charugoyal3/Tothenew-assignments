@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Date/ Time</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="lblGreetings"></div>
+    <hr>
+    <p id="time"></p>
+    <div class="date"></div>
+
+
+</body>
+        
+    <script>
+        var myDate = new Date();
+        var hrs = myDate.getHours();
+    
+        var greet;
+    
+        if (hrs < 12)
+            greet = 'Good Morning';
+        else if (hrs >= 12 && hrs <= 17)
+            greet = 'Good Afternoon';
+        else if (hrs >= 17 && hrs <= 24)
+            greet = 'Good Evening';
+    
+        document.getElementById('lblGreetings').innerHTML =
+            '<b>' + greet + '</b> ';
+    
+
+    
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"];
+        const dateObj = new Date();
+        const month = monthNames[dateObj.getMonth()];
+        const day = String(dateObj.getDate()).padStart(2, '0');
+        const year = dateObj.getFullYear();
+        const output = day  + '\n'+ month  + '\n'+ ',' + '\n' + year;
+        document.querySelector('.date').textContent = output; 
+
+
+        var time = new Date();
+        document.getElementById('time').innerHTML=time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric',second:'numeric', hour12: true })
+
+    </script>
+<!-- 
+    <script>
+        function formatAMPM(date) {
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? 'pm' : 'am';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0'+minutes : minutes;
+    var strTime = hours + ':' + minutes + ' ' + ampm;
+    return strTime;
+    }
+    </script> -->
+    
+</html>
+
+
