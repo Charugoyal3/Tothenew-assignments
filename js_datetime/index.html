@@ -4,64 +4,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Date/ Time</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>JS Date / Time</title>
+    <link href="./style.css" rel="stylesheet">
+<style>
+
+    </style>
 </head>
 <body>
-    <div id="lblGreetings"></div>
-    <hr>
-    <p id="time"></p>
-    <div class="date"></div>
 
-
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section class="content-section">
+            <div class="container wrap-height">
+                <div class="content">
+                    <div class="greeting" id="greet"></div>
+                    <hr>
+                    <div class="time" id="tm"></div>
+                    <div class="date" id="dt"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    
 </body>
-        
-    <script>
-        var myDate = new Date();
-        var hrs = myDate.getHours();
-    
-        var greet;
-    
-        if (hrs < 12)
-            greet = 'Good Morning';
-        else if (hrs >= 12 && hrs <= 17)
-            greet = 'Good Afternoon';
-        else if (hrs >= 17 && hrs <= 24)
-            greet = 'Good Evening';
-    
-        document.getElementById('lblGreetings').innerHTML =
-            '<b>' + greet + '</b> ';
-    
+<script>
+window.onload = function() {
+    currentTime();
+}
 
-    
-        const monthNames = ["January", "February", "March", "April", "May", "June",
-            "July", "August", "September", "October", "November", "December"];
-        const dateObj = new Date();
-        const month = monthNames[dateObj.getMonth()];
-        const day = String(dateObj.getDate()).padStart(2, '0');
-        const year = dateObj.getFullYear();
-        const output = day  + '\n'+ month  + '\n'+ ',' + '\n' + year;
-        document.querySelector('.date').textContent = output; 
-
-
-        var time = new Date();
-        document.getElementById('time').innerHTML=time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric',second:'numeric', hour12: true })
-
-    </script>
-<!-- 
-    <script>
-        function formatAMPM(date) {
-    var hours = date.getHours();
-    var minutes = date.getMinutes();
-    var ampm = hours >= 12 ? 'pm' : 'am';
-    hours = hours % 12;
-    hours = hours ? hours : 12; // the hour '0' should be '12'
-    minutes = minutes < 10 ? '0'+minutes : minutes;
-    var strTime = hours + ':' + minutes + ' ' + ampm;
-    return strTime;
+function currentTime() {
+    var date = new Date();
+    var hr = date.getHours();
+    var mn = date.getMinutes();
+    var sc = date.getSeconds();
+    var day = date.getDay();
+    var month = date.getMonth();
+    var yr = date.getFullYear();
+    var dayTime = "AM";
+    var monthList = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var greetList = ["Morning", "Afternoon", "Evening", "Night"];
+    var greeting = "Morning";
+    //assigning what is the daytime
+    dayTime = (hr >= 12) ? "PM" : "AM";
+    //converting time to 12 hours format
+    hr = (hr == 0) ? 12 : ((hr > 12) ? (hr - 12) : hr);
+    hr = add0(hr);
+    mn = add0(mn);
+    sc = add0(sc);
+    day = add0(day)
+    document.getElementById("tm").innerText = hr + ":" + mn + ":" + sc + " " + dayTime;
+    month = monthList[month];
+    document.getElementById("dt").innerText = day + " " + month + " " + yr;
+    if(dayTime == "AM") {
+        if (hr >= 6 && hr < 12) {
+            greeting = greetList[0];
+        }else{
+            greeting = greetList[3];
+        }
+    }else if(dayTime == "PM"){
+        if (hr == 12 && hr <= 4) {
+            greeting = greetList[1];
+        }else if (hr >= 5 && hr<8) {
+            greeting = greetList[2];
+        }else{
+            greeting = greetList[3];
+        }
     }
-    </script> -->
-    
+    document.getElementById("greet").innerText = "Good " + greeting; 
+    var tmout = setTimeout(currentTime, 1000); 
+}
+
+//This function adds 0 in front of single digit values.
+function add0(input) {
+    if(input < 10) {
+        return "0" + input;
+    }else{
+        return input;
+    }
+}
+</script>
 </html>
 
 
