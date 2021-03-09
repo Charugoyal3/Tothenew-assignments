@@ -97,9 +97,9 @@ class User {
     }
 }
 
-const user = new User('Archit');
+const user = new User('Charu');
 
-console.log(User.isNameTaken('Archit'));
+console.log(User.isNameTaken('Charu'));
 console.log(User.isNameTaken('Raman'));
 
 // 5. Import a module containing the constants and method for calculating area of circle, rectangle, cylinder.
